@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <h1>Quiz Master</h1>
+            <div class="category-selector">
+                <h3>Select Category:</h3>
+                <select id="category">
+                    <option value="all">All Categories</option>
+                    <option value="general">General Knowledge</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="geography">Geography</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="timer">
+                    <span id="time">30</span>s
+                </div>
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <div class="score">
+                    Score: <span id="score">0</span>/<span id="total-questions">0</span>
+                </div>
+            </div>
+            
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <div id="options" class="options">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="submit-btn" class="btn" type="button" aria-label="Submit answer">Submit</button>
+                <button id="next-btn" class="btn" type="button" aria-label="Next question">Next</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h2>Quiz Completed!</h2>
+            <div class="result-details">
+                <div class="score-circle">
+                    <div class="score-circle-inner">
+                        <span class="score-percent" id="score-percent">0%</span>
+                        <span class="score-text">Score</span>
+                    </div>
+                </div>
+                <div class="score-details">
+                    <p>You scored <span id="final-score">0</span> out of <span id="total-questions-final">0</span></p>
+                    <p id="result-message"></p>
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="restart-btn" class="btn">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
